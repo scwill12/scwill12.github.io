@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join a library on Firelight</title>
+
+<!-- What a message preview shows instead of the link itself. This is the
+     "clean hyperlink text": iMessage, Slack and the rest render a card from
+     these, and the URL never has to be read. -->
+<meta property="og:title" content="Join a library on Firelight">
+<meta property="og:description" content="You have been invited to an Audiobookshelf library. Open this on your iPhone to accept.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+
+<!-- This page must never read the invitation out of the URL fragment or send
+     it anywhere. The fragment is what keeps the credential off every server
+     between here and the recipient; a single analytics call or image URL
+     carrying it would undo that. There is deliberately no JavaScript. -->
+<style>
+  :root { --bg:#fbfaf8; --fg:#1c1b19; --muted:#6b6762; --accent:#c2410c; --rule:#e4e0da; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16150f; --fg:#ece9e3; --muted:#9c968c; --accent:#f97316; --rule:#302d26; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg); min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    font:17px/1.6 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-text-size-adjust:100%;
+  }
+  main { max-width:30rem; padding:3rem 1.25rem; text-align:center; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 .75rem; letter-spacing:-.01em; }
+  p { color:var(--muted); margin:0 0 1rem; }
+  .step { text-align:left; margin:2rem 0 0; padding:1rem 1.25rem; border:1px solid var(--rule); border-radius:14px; }
+  .step h2 { font:600 .78rem/1.4 ui-sans-serif, system-ui, sans-serif;
+             letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 .4rem; }
+  .step p { margin:0; font-size:.95rem; }
+  footer { margin-top:2.5rem; font:.85rem/1.5 ui-sans-serif, system-ui, sans-serif; color:var(--muted); }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>You have been invited</h1>
+  <p>Someone has made you an account on their Audiobookshelf library and
+  invited you to listen and read on Firelight.</p>
+
+  <div class="step">
+    <h2>If you have Firelight</h2>
+    <p>Open this link on your iPhone and it will take you straight to the
+    invitation, where you choose your own password.</p>
+  </div>
+
+  <div class="step">
+    <h2>If you do not</h2>
+    <p>Firelight is not on the App Store yet. Ask whoever invited you for a
+    TestFlight invitation, then open this link again.</p>
+  </div>
+
+  <footer>
+    Firelight is a free, open-source client for self-hosted
+    <a href="https://audiobookshelf.org">Audiobookshelf</a> servers.<br>
+    Your invitation stays in this link and is never sent to this page.
+  </footer>
+</main>
+</body>
+</html>

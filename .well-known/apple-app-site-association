@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["SHM7Q4GZYD.com.colewilliams.firelight"],
+        "components": [
+          { "/": "/join*", "comment": "Firelight invitation links" }
+        ]
+      }
+    ]
+  }
+}
